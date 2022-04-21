@@ -3,23 +3,40 @@
 <head>
   <title>WEB1 - html</title>
   <meta charset="utf-8">
+  <style>
+    a {
+      text-decoration: none;
+    }
+    h1 {
+      font-size:45px;
+      text-align:center;
+    }
+  </style>
 </head>
 <body>
-<h1><a href="index.html">WEB</a></h1>
+  <h1><a href="index.html">WEB</a></h1>
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+<!--
+<h1><a href="index.html"><font color="red">WEB</font></a></h1>
 <ol>
-  <li><a href="1.html">HTML</a></li>
-  <li><a href="2.html">CSS</a></li>
-  <li><a href="3.html">JavaScript</a></li>
+  <li><a href="1.html"><font color="red">HTML</font></a></li>
+  <li><a href="2.html"><font color="red">CSS</font></a></li>
+  <li><a href="3.html"><font color="red">JavaScript</font></a></li>
 </ol>
+-->
 <h2><a href="https://www.w3.org/TR/html4/"target="_blank" title="html5 speicification">HTML이란 무엇인가?</a></h2>
 <h2>IT 개발자 취업</h2>
 비전공자 28살 IT도전기<br>
-<strong><u>현 스펙</u></strong> 전기기사 전기전자전공 4년제 토스5급 한국사1급 <br>
+<strong><u>현 스펙</u></strong> 전기쌍기사 전기전자전공 4년제 토스5급 한국사1급 컴활2<br>
 <strong><u>현 상황</u></strong> 중견기업 재직중 영끌 4500 <br>
 <p>HTML includes 6 levels of headings, ranked from the highestto the lowest
 Two headings with the same name are equal rank (i.e. two
 elements in the same document are of equal rank to each othe</p>
-<img src="han.jpg" width="20%">
+<img src="jae.jpg" width="30%">
 <p style="margin-top:40px;">태그를 쓸땐 <>를 시작으로 <>안에 명령어를 넣는다<br>
 태그는 시작에 <>하나 끝에 < / >를 붙인다<br>
 배운 태그는 목록
@@ -36,6 +53,60 @@ body 본문을 쓸때 기입해줘야하는 태그<br>
 head 제목을 쓸때 기입해줘야하는 태그<br>
 html 웹을 만들때 맨 위에 들어가야하는 태그<br>
 meta charset="utf-8" 한글을 읽을 수 있게 만들어주는 태그<br>
-a 링크 *hrdf 는 링크 주소를 입력 *target=_balnk는 새로운 창에 띄우게함 title=은 그 링크에대한 주석<br></p>
+a 링크 *hrdf 는 링크 주소를 입력 *target=_balnk는 새로운 창에 띄우게함 title=은 그 링크에대한 주석<br>
+웹페이지에 CSS를 넣는 방법으로 1) < style >태그를 사용하는 방법과 2) style속성을 <br>
+쓰는 방법이 있다.<br>
+선택자(Selector)와 효과(Declaration) 라는 것이 있다.<br>
+선택자는 CSS효과를 적용해 줄 대상을 가리켜 선택해주는 것이고,<br>
+a { ~~ } 와 같은 모양새 이다. 효과는 그에 적용되어 나타나게 될 CSS효과를 CSS문<br>
+법을 통해 표현한 것으로, color:black; text-decoration:none; 등과 같이 생겼다.<br>
+효과(declaration)는 여러 개를 선언하고 지정해(넣어)줄 수 있다<br>
+(선택자가 필요 있는 상황이든 필요 없는 상황이든). 그리고 여러 개의 효과를 써준 경우<br>
+, 세미콜론( ; )으로 각 효과를 구분해준다.<br>
+id 선택자 태그 선택자 class 선택자 중에선<br>
+id 선택자가 제일 강하고 그다음 class 선택자 그 다음 태그 선택자 순으로 동작한다<br>
+- id(가장희귀)>class(중간층) > a (태그/가장흔함)<br>
+class="saw active" >> 선택자에서는 .saw 이나 .active 우선순위는 뒤에께 우선//// <br>
+id="active">> 선택자에서는 #active 가장 우선순위 ( 단하나만 존재)<br>
+css box model<br>
+화면 전체를 쓰는 모델은 block level element<br>
+자기 크기만 갖는 모델은 inline element<br>
+콘텐츠의 크기를 지정은 폭은 width, 높이는 height값을 지정<br>
+콘텐츠와 바깥쪽 테두리 간격은 padding<br>
+테두리와 테두리 사이는 magin 이다<br>
+border는 박스의 속성 조정가능<br>
+===용어 정리===<br>
+border : 테두리<br>
+border - width : 테두리 두께<br><br>
+border - color : 테두리 컬러<br>
+border - style : 테두리의 스타일 ex) 단선인지 실선인지<br>
+
+block level element : 화면 전체를 쓰는 태그<br>
+inline element :  자기 자신의 크기만큼 갖는 태그<br>
+
+display : 속성 ex)inline, block<br>
+display : none; 태그를 안 보이게 할 수 있음.<br>
+
+padding : 콘텐츠와 테두리 사이의 여백<br>
+margin : 테두리와 테두리사이의 간격<br>
+
+===중복 된 것을 압축===<br>
+1.<br>
+h1,a{<br>
+<br>
+}<br>
+<br>
+// ' , '를 통해 압축 가능 //<br>
+<br>
+2.<br>
+ border : 5px solid red;<br>
+ <br>
+//순서 상관 없이 저렇게 하면 압축 가능//<br>
+div span 은 무색무취의 문법 하지만 div는 block level elemnet이고 span은 inline element이다<br>
+
+<input type="text" />
+<input type "number" />
+<select style="height 40px"
+</p>
 </body>
 </html>
